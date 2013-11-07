@@ -1,0 +1,58 @@
+.input-area{
+	background-color: #F8F9F4;
+    background-image: linear-gradient(#F8F9F4, #FFFFFF);
+    border: medium none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 1px 4px 1px #B4B6A9, 2px 2px 1px 0 #FFFFFF inset;
+    margin-bottom: 15px;    
+    margin-top: 35px;
+}
+
+.input-area .header {
+    border-bottom: 1px solid #CFD1C6;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.input-area .header h5 {
+    color: #333333;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px 15px 0;
+    text-transform: capitalize;
+}
+
+.input-area .contentLogin {
+    padding-left: 15px;   
+    padding-right: 15px;    
+}
+
+.input-area .actions {
+    background-color: #F5F5F5;
+    border-top: 1px solid #DDDDDD;
+    box-shadow: 0 1px 0 #FFFFFF inset;
+    margin-top: 20px;
+    min-height: 25px;
+    padding: 15px;    
+}
+
+.input-area textarea{
+	resize:vertical; 
+	max-height:300px; 
+	min-height:200px;
+	overflow-y: auto;
+	overflow-x: hidden; 
+	font-size: 10 px;
+	background-color: #F3F3F3;
+	background-repeat: repeat-y;
+}
+
+.message-area{
+	width: 100%;
+	display: block;
+	margin: 10px 0px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;	 
+}
