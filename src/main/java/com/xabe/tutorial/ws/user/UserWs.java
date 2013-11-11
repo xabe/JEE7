@@ -36,7 +36,14 @@ public class UserWs extends BaseRest {
 		User user = new User();
 		user.setName(name);		
 		user.setUsername(name+new Date().getTime());
-		userEJB.add(user);		
+		if(userEJB != null)
+		{
+			userEJB.add(user);
+		}		
+		else
+		{
+			logger.info("Ejb es nulo");
+		}
 	}
 
 	@Path("/all")

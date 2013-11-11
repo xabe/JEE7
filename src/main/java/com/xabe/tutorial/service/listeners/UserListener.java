@@ -50,7 +50,14 @@ public class UserListener {
 		LOGGER.info("## ---------------------------------------------------------------------------->New user created: " + user.getName());
 		try
 		{
-			notification.addUser("New user : "+user.getName());
+			if(notification != null)
+			{
+				notification.addUser("New user : "+user.getName());
+			}
+			else
+			{
+				LOGGER.info("Websocket notificacion es null");
+			}
 		}catch(IOException exception){
 			LOGGER.error("Error al enviar la notificación");
 		}
@@ -66,7 +73,14 @@ public class UserListener {
 		LOGGER.info("## ---------------------------------------------------------------------------->User updated: " + user.getName());
 		try
 		{
-			notification.addUser("Update user : "+user.getName());
+			if(notification != null)
+			{
+				notification.addUser("Update user : "+user.getName());
+			}
+			else
+			{
+				LOGGER.info("Websocket notificacion es null");
+			}
 		}catch(IOException exception){
 			LOGGER.error("Error al enviar la notificación");
 		}
@@ -82,7 +96,14 @@ public class UserListener {
 		LOGGER.info("## ---------------------------------------------------------------------------->User deleted: " + user.getName());
 		try
 		{
-			notification.addUser("Delete user : "+user.getName());
+			if(notification != null)
+			{
+				notification.addUser("Delete user : "+user.getName());
+			}
+			else
+			{
+				LOGGER.info("Websocket notificacion es null");
+			}
 		}catch(IOException exception){
 			LOGGER.error("Error al enviar la notificación");
 		}

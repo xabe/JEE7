@@ -3,6 +3,9 @@ package com.xabe.tutorial.service;
 import java.io.Serializable;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.xabe.tutorial.model.Model;
 
 /**
@@ -12,6 +15,7 @@ import com.xabe.tutorial.model.Model;
  */
 public abstract class Service<T extends Model> implements Serializable{
 	private static final long serialVersionUID = 1L;
+	protected final Logger LOGGER = LoggerFactory.getLogger(getClass().getName());
 
 	public abstract void add(T t);
 	

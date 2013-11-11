@@ -19,8 +19,14 @@ public class UserEJB extends Service<User>{
 
 
 	public void add(User t) {
+		try
+		{
 		entityManager.persist(t);
 		entityManager.flush();
+		}catch(Exception e){
+			LOGGER.error("Error al hacer la insercion : "+e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	public void delete(User t) {

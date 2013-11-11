@@ -55,13 +55,13 @@ public class User extends Model {
 
     private String picture;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
 //    @Column( 
 //    updatable = false,
 //    columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private Date dateLastPassword;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dateLastLogin;
 
     public Integer getId() {
