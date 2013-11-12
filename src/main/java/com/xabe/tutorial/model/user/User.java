@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -29,7 +30,8 @@ public class User extends Model {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="t_user_seq_gen")
+	@SequenceGenerator(name="t_user_seq_gen", sequenceName="T_USER_SEQ")
     private Integer id;
 
     private String name;

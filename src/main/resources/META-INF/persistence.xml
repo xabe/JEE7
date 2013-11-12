@@ -21,13 +21,13 @@
             <!-- Eclipse Link -->
 <!--             <property name="eclipselink.ddl-generation" value="create-tables" /> -->
 <!--             <property name="eclipselink.deploy-on-startup" value="true"/>                  -->
-<!--             <property name="eclipselink.target-database" value="${type-database-hibernate}" /> -->
+<!--             <property name="eclipselink.target-database" value="${type-database-eclipse-link}" /> -->
 <!-- 			<property name="eclipselink.logging.level" value="FINE" /> -->
 
 			<!-- Hibernate -->
 			<property name="hbm2ddl.auto" value="create"/>
 			<property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+            <property name="hibernate.dialect" value="${type-database-hibernate}" />
             <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
             <property name="hibernate.format_sql" value="false" />
         </properties>

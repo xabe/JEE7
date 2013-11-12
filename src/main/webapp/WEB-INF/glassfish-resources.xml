@@ -35,7 +35,7 @@
 		<property name="User" value="sa" />
 		<property name="Password" value="filePassword root" />
 		<property name="URL"
-			value="jdbc:h2:mem:testDB;IGNORECASE=TRUE;CACHE_TYPE=TQ;CIPHER=AES;LOG=0;MULTI_THREADED=0;DB_CLOSE_ON_EXIT=TRUE;DB_CLOSE_DELAY=-1" />
+			value="jdbc:h2:mem:testDB;IGNORECASE=TRUE;CACHE_TYPE=TQ;CIPHER=AES;LOG=0;MULTI_THREADED=0;DB_CLOSE_ON_EXIT=TRUE;DB_CLOSE_DELAY=-1;MODE=${mode}" />
 		<property name="driverClass" value="org.h2.Driver" />
 	</jdbc-connection-pool>
 

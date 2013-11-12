@@ -21,28 +21,30 @@
 
 <body onload="init();" onunload="closeSession();">
 	
-	<div class="row">	
-	        <div class="col-lg-6 col-lg-offset-3 input-area">
-	        
-	        	<div class="header">
-	                <h5>Chat</h5>
-	            </div>
-	        	<input type="hidden" id="state" value="${state}" >
-	        	<div class="contentLogin">
-	            	<textarea id="messages" class="message-area" readonly="readonly" wrap="off" ></textarea>
-	            </div>
-	            
-	            <div class="actions">
-	            	<input id="userInput" class="form-control" type="text" placeholder="usuario" />
-	            	<div class="input-group">	            		
-	            		<input id="messageInput" class="form-control" type="text" placeholder="Mensaje" onkeydown="if (event.keyCode == 13) sendMessage();" />
-	            	 	<span class="input-group-btn">
-	            	 		<button type="button" onclick="sendMessage();return false;" class="btn btn-success">Enviar</button> 
-	            	 	</span>
-	           		</div>
-	           	</div>
-	        
-	        </div>
+	<div class="container">	
+		<div class="row">	
+		        <div class="col-lg-6 col-lg-offset-3 input-area">
+		        
+		        	<div class="header">
+		                <h5>Chat</h5>
+		            </div>
+		        	<input type="hidden" id="state" value="${state}" >
+		        	<div class="contentLogin">
+		            	<textarea id="messages" class="message-area" readonly="readonly" wrap="off" ></textarea>
+		            </div>
+		            
+		            <div class="actions">
+		            	<input id="userInput" class="form-control" type="text" placeholder="usuario" />
+		            	<div class="input-group">	            		
+		            		<input id="messageInput" class="form-control" type="text" placeholder="Mensaje" onkeydown="if (event.keyCode == 13) sendMessage();" />
+		            	 	<span class="input-group-btn">
+		            	 		<button type="button" onclick="sendMessage();return false;" class="btn btn-success">Enviar</button> 
+		            	 	</span>
+		           		</div>
+		           	</div>
+		        
+		        </div>
+		</div>
    </div>
 	
 	<script src="resource/js/jquery-1.10.2.min.js"></script>

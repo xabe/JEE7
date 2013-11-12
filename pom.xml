@@ -23,6 +23,7 @@
 		<type-database-eclipse-link>DERBY</type-database-eclipse-link>
 		<type-database-hibernate>org.hibernate.dialect.DerbyDialect</type-database-hibernate>
 		<state>Development</state>
+		<mode>Derby</mode>
 	</properties>
 
 	<pluginRepositories>
@@ -205,6 +206,7 @@
 				<type-database-eclipse-link>org.eclipse.persistence.platform.database.H2Platform</type-database-eclipse-link>
 				<type-database-hibernate>org.hibernate.dialect.H2Dialect</type-database-hibernate>
 				<state>Development</state>
+				<mode>MySQL</mode>
 			</properties>
 		</profile>
 		<profile>
@@ -215,6 +217,7 @@
 				<type-database-eclipse-link>org.eclipse.persistence.platform.database.H2Platform</type-database-eclipse-link>
 				<type-database-hibernate>org.hibernate.dialect.H2Dialect</type-database-hibernate>
 				<state>Relaese</state>
+				<mode>MySQL</mode>
 			</properties>
 		</profile>
 		<profile>
@@ -225,6 +228,7 @@
 				<type-database-eclipse-link>DERBY</type-database-eclipse-link>
 				<type-database-hibernate>org.hibernate.dialect.DerbyDialect</type-database-hibernate>
 				<state>Development</state>
+				<mode>Derby</mode>
 			</properties>
 			<build>
 				<plugins>

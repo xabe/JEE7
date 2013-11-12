@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Tue Nov 12 13:20:02 CET 2013:
+ Arrancando Derby versión The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instancia a816c00e-0142-4c41-13c5-000012036cd0 
+en el directorio de base de datos C:\Users\Biomed\AppData\Local\Temp\gfembed5343408515572751948tmp\lib\databases\ejbtimer  con el cargador de clases ClassRealm[plugin>org.glassfish.embedded:maven-embedded-glassfish-plugin:3.1.2.2, parent: sun.misc.Launcher$AppClassLoader@1174ec5]
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=d:\interno\javaee7
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
