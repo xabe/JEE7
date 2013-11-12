@@ -4,19 +4,16 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.xabe.tutorial.model.Model;
-import com.xabe.tutorial.service.listeners.UserListener;
 
 @Entity
 @Table(name="t_user")
@@ -24,14 +21,13 @@ import com.xabe.tutorial.service.listeners.UserListener;
     @NamedQuery(name = "User.findAll", query = "SELECT m FROM User m"),
     @NamedQuery(name = "User.findById", query = "SELECT m FROM User m WHERE m.id = :id"),
     @NamedQuery(name = "User.findByName", query = "SELECT m FROM User m WHERE m.name = :name")})
-@EntityListeners(UserListener.class)
+//@EntityListeners(UserListener.class)
 public class User extends Model {
 	
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="t_user_seq_gen")
-	@SequenceGenerator(name="t_user_seq_gen", sequenceName="T_USER_SEQ")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     private String name;
