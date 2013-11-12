@@ -29,7 +29,7 @@ function init() {
 	}
 	else
 	{
-		 endPointURL = type + window.location.host + port + "/websocket";
+		 endPointURL = type + window.location.host + port + webCtx + "/websocket";
 	}
 	console.log(endPointURL);
 	output = $("#output");
