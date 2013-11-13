@@ -20,11 +20,27 @@
 		<org.slf4j.version>1.7.5</org.slf4j.version>
 		<transaction-type>RESOURCE_LOCAL</transaction-type>
 		<transaction-jndi>jdbc/__default</transaction-jndi>
+		
 		<type-database-eclipse-link>DERBY</type-database-eclipse-link>
+<!-- 		<type-database-eclipse-link>org.eclipse.persistence.platform.database.H2Platform</type-database-eclipse-link> -->
+		
 		<type-database-hibernate>org.hibernate.dialect.DerbyDialect</type-database-hibernate>
+<!-- 		<type-database-hibernate>org.hibernate.dialect.H2Dialect</type-database-hibernate> -->
+		
 		<state>Development</state>
 		<mode>Derby</mode>
+		<jta-provider>org.eclipse.persistence.jpa.PersistenceProvider</jta-provider>
+<!-- 		<jta-provider>org.hibernate.ejb.HibernatePersistence</jta-provider> -->
 	</properties>
+	
+	<repositories>
+        <repository>
+            <url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
+            <id>eclipselink</id>
+            <layout>default</layout>
+            <name>Repository for library EclipseLink (JPA 2.0)</name>
+        </repository>
+    </repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -226,9 +242,9 @@
 			<id>openshift</id>
 			<properties>
 				<transaction-type>JTA</transaction-type>
-				<transaction-jndi>java:app/h2testDB</transaction-jndi>
-				<type-database-eclipse-link>org.eclipse.persistence.platform.database.H2Platform</type-database-eclipse-link>
-				<type-database-hibernate>org.hibernate.dialect.H2Dialect</type-database-hibernate>
+				<transaction-jndi>java:app/DerbytestDB</transaction-jndi>
+				<type-database-eclipse-link>DERBY</type-database-eclipse-link>
+				<type-database-hibernate>org.hibernate.dialect.DerbyDialect</type-database-hibernate>
 				<state>Relaese</state>
 				<mode>MySQL</mode>
 			</properties>
@@ -237,7 +253,7 @@
 			<id>glassfish</id>
 			<properties>
 				<transaction-type>JTA</transaction-type>
-				<transaction-jndi>jdbc/__default</transaction-jndi>
+				<transaction-jndi>java:app/DerbytestDB</transaction-jndi>
 				<type-database-eclipse-link>DERBY</type-database-eclipse-link>
 				<type-database-hibernate>org.hibernate.dialect.DerbyDialect</type-database-hibernate>
 				<state>Development</state>
